@@ -18,7 +18,7 @@ body {
 }
 
 .dashboard-title {
-  font-size: 2.5rem;
+  font-size: 3.0rem;
   color: #333;
   margin-bottom: 40px;
   position: relative;
@@ -30,68 +30,60 @@ body {
   100% { opacity: 1; }
 }
 
+.forms-border {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 40px; /* Increased padding */
+  background-color: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Increased width */
+}
+
 .forms-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Increased gap between rows */
 }
 
-.forms-grid > .form-card {
-  justify-self: center;
-}
-
-@keyframes slideIn {
-  0% { transform: translateY(50px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+.forms-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Increased gap between cards */
 }
 
 .form-card {
   background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px; /* Increased padding */
   text-align: center;
-  width: 180px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
+  width: 150px; /* Increased width */
+  height: 150px; /* Increased height */
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .form-icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 15px;
-  transition: transform 0.3s;
+  width: 70px; /* Increased icon size */
+  height: 70px; /* Increased icon size */
+  margin-bottom: 15px; /* Increased margin */
+  transition: transform 0.2s;
 }
 
 .form-card:hover .form-icon {
-  transform: rotate(20deg) scale(1.1);
+  transform: rotate(10deg) scale(1.05);
 }
 
 .form-label {
-  font-size: 1rem;
+  font-size: 1.1rem; /* Increased font size */
   color: #555;
   margin: 0;
-}
-
-.form-card::before {
-  content: '';
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: 100%;
-  left: -50%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: rotate(45deg);
-  transition: top 0.5s;
-}
-
-.form-card:hover::before {
-  top: -50%;
 }
