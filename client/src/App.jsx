@@ -11,13 +11,19 @@ import BookChapterForm from './components/BookChapterForm/BookChapterForm'; // A
 import NbaForm from './components/NbaForm/NbaForm'; // Assuming you have this component
 import PublicationForm from './components/PublicationForm/PublicationForm'; // Assuming you have this component
 import PatentForm from './components/PatentForm/PatentForm'; // Assuming you have this component
+import NavBar from './components/NavBar/NavBar';
+import Home from './components/Home/Home';
+import CampusInfo from './components/CampusInfo/CampusInfo';
 
 const App = () => {
   return (
     <div>
       <Router>
+        <NavBar/>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/signin" element={<Login />} />
+          <Route path="/contact" element={<CampusInfo />} />
+          <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admin-login" element={<AdminLoginForm />} />

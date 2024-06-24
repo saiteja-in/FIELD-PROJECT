@@ -13,7 +13,6 @@ import { AiOutlineSwapRight } from "react-icons/ai";
 import { MdMarkEmailRead } from 'react-icons/md';
 
 const Register = () => {
-
   const [email, setEmail] = useState('');
   const [facultyID, setFacultyID] = useState('');
   const [password, setPassword] = useState('');
@@ -30,7 +29,7 @@ const Register = () => {
       FacultyID: facultyID,
       Password: password
     }).then(() => {
-      navigateTo('/');
+      navigateTo('/signin');
       setEmail('');
       setFacultyID('');
       setPassword('');
@@ -50,7 +49,7 @@ const Register = () => {
           </div>
           <div className="footerDiv flex">
             <span className="text">Have an account?</span>
-            <Link to={'/'}>
+            <Link to={'/signin'}>
               <button className='btn'>Login</button>
             </Link>
           </div>
